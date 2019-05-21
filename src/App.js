@@ -10,8 +10,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <button onClick={() => setCount(count + 1)}>+</button>
       <button onClick={() => setCount(count > 0 ? count - 1 : 0)}>-</button>
+      { count }
+      <button onClick={() => setCount(count + 1)}>+</button>
     </div>
   );
 }
