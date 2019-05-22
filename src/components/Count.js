@@ -1,15 +1,10 @@
-import  React, { useState, useEffect } from 'react';
-import './App.css';
+import  React, { useState } from 'react';
 
-const App = () => {
+const Count = () => {
   const [count, setCount] = useState(0)
   
-  useEffect(() => {
-    document.title = `Você clicou ${count} vezes.`
-  }, [count])
-
   return (
-    <div className="App">
+    <div className="count">
       <button onClick={() => setCount(count > 0 ? count - 1 : 0)}>-</button>
       { count }
       <button onClick={() => setCount(count + 1)}>+</button>
@@ -17,4 +12,4 @@ const App = () => {
   );
 }
 
-export default App
+export default Count
